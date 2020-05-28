@@ -1,28 +1,59 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+
+    <div class="flex">
+        <div class="flex-initial w-1/4 border-2 border-gray-200 bg-white shadow-md">
+            
+           <div v-for="(list, key) in lists" :key="key" class="border-b-2 border-gray-200 p-5 clearfix">
+                <img src="https://demos.creative-tim.com/tailwindcss-starter-project/_next/static/images/team-4-470x470-4ef82ef45a9598d24c4c951ead4d626a.png" class="float-left mr-2 shadow-lg rounded-full w-16 h-16" />
+                <h6 class="font-bold">Name {{ list }}</h6>
+                <p class="font-normal text-sm text-green-700">Detail of name {{ list }}</p>
+           </div>
+
+
+        </div>
+
+        <div class="flex-initial w-3/4 ml-5 border-2 border-gray-200 bg-white shadow-md p-4">
+            <h1 class="text-6xl">hello</h1>
+            <h1 class="text-6xl">hello</h1>
+            <h1 class="text-6xl">hello</h1>
+            <h1 class="text-6xl">hello</h1>
+            <h1 class="text-6xl">hello</h1>
+            <h1 class="text-6xl">hello</h1>
+            <h1 class="text-6xl">hello</h1>
+            <h1 class="text-6xl">hello</h1>
+            <h1 class="text-6xl">hello</h1>
+            <h1 class="text-6xl">hello</h1>
+        </div>
+    </div>
+    
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
+
   name: 'App',
+
   components: {
-    HelloWorld
+
+  },
+
+  data() {
+    return {
+        lists: [1,2,3,4,5]
+    }
   }
+
+
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+    @import url("./assets/css/tailwind.css");
+
+    body {
+        background: #ebecec !important;
+        padding: 75px;
+    }
+
 </style>
